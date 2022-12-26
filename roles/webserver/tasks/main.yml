@@ -34,4 +34,4 @@
     dest: "{{tomcatstudentwardest}}"
 
 - name: service start
-  shell: nohup /opt/apache-tomcat-9.0.70/bin/catalina.sh start
+  shell: /opt/apache-tomcat-9.0.70/bin/catalina.sh start
