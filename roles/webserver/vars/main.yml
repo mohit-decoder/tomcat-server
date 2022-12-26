@@ -1,5 +1,5 @@
 tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.zip
-package1: openjdk-11-jre
+package1: java-1.8.0-openjdk
 package2: unzip
 package3: wget
 tomcatfile_src: /opt/apache-tomcat-9.0.70.zip
