@@ -45,7 +45,7 @@
     dest: /opt/
     
 - name: move file
-  shell: sudo mv /opt/context.xml -C /opt/apache-tomcat-9.0.70/conf/
+  shell: sudo mv /opt/context.xml /opt/apache-tomcat-9.0.70/conf/
 
 - name: Download Package
   ansible.builtin.get_url:
