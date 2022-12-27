@@ -37,7 +37,7 @@
     src: context.xml
     dest: /opt/apache-tomcat-9.0.70/conf/
 
-    
+
 - name: Download Package
   ansible.builtin.get_url:
     url: "{{tomcat_url}}"
@@ -97,6 +97,9 @@
     name: student
     state: import 
     target: /tmp/dump.sql/dump.sql
+
+- name: service start
+  shell: /opt/apache-tomcat-9.0.70/bin/catalina.sh stop
 
 - name: service start
   shell: nohup /opt/apache-tomcat-9.0.70/bin/catalina.sh start
