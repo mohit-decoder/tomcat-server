@@ -42,8 +42,10 @@
   become: true
   ansible.builtin.get_url:
     url: https://tanmay-123.s3.amazonaws.com/context.xml
-    dest: /opt/apache-tomcat-9.0.70/conf/context.xml
+    dest: /opt/
     
+- name: move file
+  shell: sudo mv /opt/context.xml -C /opt/apache-tomcat-9.0.70/conf/
 
 - name: Download Package
   ansible.builtin.get_url:
