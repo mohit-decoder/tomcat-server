@@ -5,7 +5,7 @@ package2: unzip
 package3: wget
 package4: mariadb-server
 package5: python-mysqldb
-package6: mysql
+package6: mysql-server
 tomcatfile_src: /opt/apache-tomcat-9.0.70.zip
 tomcatfile_dest: /opt
 tomcatstudentwar: https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
