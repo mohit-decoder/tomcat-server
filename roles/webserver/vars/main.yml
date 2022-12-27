@@ -4,7 +4,7 @@ package1: openjdk-11-jre
 package2: unzip
 package3: wget
 package4: mariadb-server
-package5: MySQL-python
+package5: python-mysqldb
 package6: mysql
 tomcatfile_src: /opt/apache-tomcat-9.0.70.zip
 tomcatfile_dest: /opt
