@@ -63,6 +63,7 @@
   mysql_user: 
     name: root
     password: Redhat@123
+    host: localhost
     priv: '*.*:ALL'  
     state: present  
     check_implicit_admin: true
@@ -84,7 +85,7 @@
     target: /tmp/dump.sql/dump.sql
 
 - name: service mysql restart
-  shell: service restart mysql
+  shell: service restart mariadb
 
 - name: service start
   shell: nohup /opt/apache-tomcat-9.0.70/bin/catalina.sh start
