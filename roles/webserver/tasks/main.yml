@@ -53,16 +53,18 @@
     src: my.cnf 
     dest: /root/.my.cnf
 
-- name: Create a new database with name "myFirstDB"  
-  mysql_db: 
-    name: student
-    state: present  
 
 - name: Create user in database with name "admin"  
   mysql_user: 
     name: mohit
     password: Redhat@123
     priv: '*.*:ALL'  
+    state: present  
+    check_implicit_admin: true
+
+- name: Create a new database with name "myFirstDB"  
+  mysql_db: 
+    name: student
     state: present  
        
 - name: add sample data to database  
