@@ -74,11 +74,11 @@
     src: my.cnf 
     dest: /root/.my.cnf
 
-# - name: service mysql restart
-#   service: 
-#     name: mysql.service
-#     state: started
-#     enabled: true
+- name: service mysql restart
+  service: 
+    name: mariadb
+    state: started
+    enabled: true
 
 - name: Create user in database with name "admin"  
   mysql_user: 
