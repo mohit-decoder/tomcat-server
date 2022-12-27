@@ -2,8 +2,11 @@ tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9
 package1: java-1.8.0-openjdk
 package2: unzip
 package3: wget
+package4: mariadb-server
 tomcatfile_src: /opt/apache-tomcat-9.0.70.zip
 tomcatfile_dest: /opt
 tomcatstudentwar: https://s3-us-west-2.amazonaws.com/studentapi-cit/student.war
 tomcatstudentwardest: /opt/apache-tomcat-9.0.70/webapps
 myfile: /opt/apache-tomcat-8.5.82/bin/catalina.sh
+mysqlconnect: https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
+mysqldest: /opt/apache-tomcat-9.0.70/lib

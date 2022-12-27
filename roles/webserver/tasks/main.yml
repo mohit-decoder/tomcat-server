@@ -13,6 +13,11 @@
     state: present
     name: "{{package3}}"
 
+- name: Package installation mysql
+  ansible.builtin.package:
+    state: present
+    name: "{{package4}}"
+
 - name: System Update
   shell: yum update
 
@@ -33,5 +38,41 @@
     url: "{{tomcatstudentwar}}"
     dest: "{{tomcatstudentwardest}}"
 
+- name: Download Artifact
+  ansible.builtin.get_url:
+    url: "{{mysqlconnect}}"
+    dest: "{{mysqldest}}"
+
+- name: copy .my.cnf file with root password credentials
+  template: 
+    src: my.cnf 
+    dest: /root/.my.cnf
+
+- name: Create a new database with name "myFirstDB"  
+  mysql_db: 
+    name: student
+    state: present  
+
+- name: Create user in database with name "admin"  
+  mysql_user: 
+    name: mohit
+    password: Redhat@123
+    priv: '*.*:ALL'  
+    state: present  
+       
+- name: add sample data to database  
+  template: 
+    src: dump.sql 
+    dest: /tmp/dump.sql/ 
+
+- name: insert sample data into database  
+  mysql_db: 
+    name: student
+    state: import 
+    target: /tmp/dump.sql/dump.sql
+
+- name: service mysql restart
+  shell: service restart mysql
+
 - name: service start
-  shell: /opt/apache-tomcat-9.0.70/bin/catalina.sh start
+  shell: nohup /opt/apache-tomcat-9.0.70/bin/catalina.sh start
