@@ -13,10 +13,10 @@
     state: present
     name: "{{package3}}"
 
-- name: Package installation mariadb-server
-  ansible.builtin.package:
-    state: present
-    name: "{{package4}}"
+# - name: Package installation mariadb-server
+#   ansible.builtin.package:
+#     state: present
+#     name: "{{package4}}"
 
 - name: Package installation python-mysql
   ansible.builtin.package:
