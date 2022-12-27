@@ -59,7 +59,10 @@
     dest: /root/.my.cnf
 
 - name: service mysql restart
-  shell: service restart mariadb
+  service: 
+    name: mariadb
+    state: started
+    enabled: true
 
 - name: Create user in database with name "admin"  
   mysql_user: 
