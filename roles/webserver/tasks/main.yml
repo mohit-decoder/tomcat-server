@@ -31,6 +31,13 @@
 - name: System Update
   shell: yum update
 
+
+- name: copy context.xml
+  template: 
+    src: context.xml
+    dest: /opt/apache-tomcat-9.0.70/conf/
+
+    
 - name: Download Package
   ansible.builtin.get_url:
     url: "{{tomcat_url}}"
