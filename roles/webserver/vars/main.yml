@@ -12,7 +12,7 @@ myfile: /opt/apache-tomcat-8.5.82/bin/catalina.sh
 mysqlconnect: https://s3-us-west-2.amazonaws.com/studentapi-cit/mysql-connector.jar
 mysqldest: /opt/apache-tomcat-9.0.70/lib
 cnfdest: /home/ec2-user/tomcat-server/roles/webserver/template/my.cnf
-USERNAME: mohit
+USERNAME: root
 PASSWORD: Redhat@123
 DB_CONNECTOR: localhost
 DATABASE: student

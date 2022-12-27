@@ -56,7 +56,7 @@
 
 - name: Create user in database with name "admin"  
   mysql_user: 
-    name: mohit
+    name: root
     password: Redhat@123
     priv: '*.*:ALL'  
     state: present  
