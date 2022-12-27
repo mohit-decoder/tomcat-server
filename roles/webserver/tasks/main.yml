@@ -29,7 +29,7 @@
     name: "{{package6}}"
 
 - name: System Update
-  shell: yum update
+  shell: apt update
 
 
 - name: copy context.xml
