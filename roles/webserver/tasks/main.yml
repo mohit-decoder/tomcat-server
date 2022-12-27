@@ -76,7 +76,7 @@
 
 - name: service mysql restart
   service: 
-    name: mariadb.service
+    name: mysql.service
     state: started
     enabled: true
 
