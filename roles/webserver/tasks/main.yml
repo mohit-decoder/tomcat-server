@@ -33,10 +33,10 @@
 
 
 - name: copy context.xml
+  become: yes
   template: 
     src: context.xml
     dest: /opt/apache-tomcat-9.0.70/conf/context.xml
-    remote_src: yes
 
 
 - name: Download Package
