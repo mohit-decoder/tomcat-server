@@ -33,7 +33,7 @@
 
 
 - name: copy context.xml
-  become: yes
+  become: true
   template: 
     src: context.xml
     dest: /opt/apache-tomcat-9.0.70/conf/context.xml
