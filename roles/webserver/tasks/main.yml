@@ -91,8 +91,5 @@
     state: import 
     target: /tmp/dump.sql/dump.sql
 
-- name: service mysql restart
-  shell: service restart mariadb
-
 - name: service start
   shell: nohup /opt/apache-tomcat-9.0.70/bin/catalina.sh start
