@@ -36,8 +36,14 @@
   become: true
   template: 
     src: context.xml
-    dest: /opt/apache-tomcat-9.0.70/conf/context.xml
+    dest: /tmp
 
+- name: copy file
+  become: true
+  ansible.builtin.copy:
+    src: /tmp/context.xml
+    dest: /opt/apache-tomcat-9.0.70/conf/context.xml
+    remote_src: yes
 
 - name: Download Package
   ansible.builtin.get_url:
