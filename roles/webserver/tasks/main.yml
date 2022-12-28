@@ -28,6 +28,11 @@
     state: present
     name: "{{package6}}"
 
+- name: Package installation mysql-secure-installation
+  ansible.builtin.package:
+    state: present
+    name: "{{package7}}"
+
 - name: System Update
   shell: apt update
 
